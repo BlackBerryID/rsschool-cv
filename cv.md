@@ -35,3 +35,19 @@ function euclideanDistance(point1, point2){
   return Math.round(Math.sqrt(result) * 100) / 100;
 }
 ```
+
+### Experience
+
+- I read book: 'grokking algorithms'
+- I did a task from 2021Q1 stage 1: 'virtual piano'. You can check it [here](https://rolling-scopes-school.github.io/blackberryid-JSFE2021Q1/virtual-piano/)
+- I passed most of the lessons from WesBos's course: [JS30](https://javascript30.com/)
+
+### Education
+
+- I graduated from BNTU with a degree in marketing and economics.
+- I'm currently taking a free course from EPAM.
+
+### English
+
+**_B1_**
+_I improve my English by communicating with foreigners every week through a cell phone app._
