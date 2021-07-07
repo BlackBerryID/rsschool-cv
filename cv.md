@@ -22,3 +22,16 @@
 - CSS3
 - Javascript basics
 - Git (Github)
+
+### Code examples
+
+```
+function euclideanDistance(point1, point2){
+  const length = point1.length;
+  let result = 0;
+  for (let i = 0; i < length; i++) {
+    result += Math.pow((point2[i] - point1[i]), 2);
+  }
+  return Math.round(Math.sqrt(result) * 100) / 100;
+}
+```
