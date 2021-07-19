@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -110,7 +111,71 @@ body {
 }
 
 .resume-right {
+  position: relative;
+  padding: 33px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #747373;
   background-color: #fff;
+}
+.resume-right .experience li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #dcf7ff;
+  border: 3px solid #dcf7ff;
+  border-radius: 30px;
+}
+.resume-right .experience p,
+.resume-right .experience h5 {
+  display: inline-block;
+}
+.resume-right h3,
+.resume-right h4 {
+  color: #003147;
+  text-transform: uppercase;
+  margin: 40px 0 20px;
+}
+.resume-right h3.title,
+.resume-right h4.title {
+  margin-top: 7px;
+}
+.resume-right footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 35px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 0;
+  background: linear-gradient(20deg, #003147 20%, #fff);
+}
+.resume-right footer a {
+  display: block;
+}
+.resume-right footer .github-mark {
+  width: 40px;
+  vertical-align: middle;
+}
+.resume-right footer .github-logo {
+  width: 100px;
+  vertical-align: middle;
+}
+.resume-right footer .rsschool {
+  display: flex;
+  align-items: center;
+}
+.resume-right footer .rsschool-logo {
+  width: 100px;
+  vertical-align: middle;
+}
+.resume-right footer span {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #000;
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
