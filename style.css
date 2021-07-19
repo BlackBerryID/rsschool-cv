@@ -141,6 +141,15 @@ body {
 .resume-right h4.title {
   margin-top: 7px;
 }
+.resume-right .skills-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.resume-right .skills-items .skills-item {
+  padding: 10px;
+  border: 5px solid #dcf7ff;
+  border-radius: 40px;
+}
 .resume-right footer {
   display: flex;
   justify-content: flex-end;
