@@ -1,1 +1,1 @@
-https://blackberryid.github.io/rsschool-cv/cv
+https://blackberryid.github.io/rsschool-cv
