@@ -63,6 +63,12 @@ body {
   font-weight: 500;
   margin-top: 0;
 }
+.resume-left ul > p {
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
 .resume-left h1,
 .resume-left h4 {
   margin-bottom: 10px;
@@ -96,9 +102,10 @@ body {
   font-weight: 500;
 }
 .resume-left .english h4 {
+  display: inline-block;
   position: relative;
 }
-.resume-left .english div {
+.resume-left .english span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -106,6 +113,7 @@ body {
   height: 25px;
   margin-left: 10px;
   color: #14c3f8;
+  font-weight: 700;
   background-color: #d8f3fc;
   border-radius: 50%;
 }
