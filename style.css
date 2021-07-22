@@ -62,6 +62,9 @@ body {
   font-weight: 500;
   margin-top: 0;
 }
+.resume-left ul a {
+  color: #c1ecfa;
+}
 .resume-left ul > p {
   font-weight: 700;
   margin-top: 40px;
@@ -160,6 +163,17 @@ body {
   padding: 10px;
   border: 5px solid #dcf7ff;
   border-radius: 40px;
+  transition: all 0.1s linear;
+}
+.resume-right .skills-items .skills-item:hover {
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(20deg, #003147 1%, #c1ecfa);
+  border-color: #fff;
+}
+.resume-right .skills-items .skills-item:active {
+  transform: scale(0.95) translateY(10%);
+  user-select: none;
 }
 .resume-right footer {
   display: flex;
