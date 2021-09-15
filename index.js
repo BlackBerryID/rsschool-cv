@@ -63,3 +63,53 @@ window.addEventListener("load", () => {
     contactPicture.style.transition = "filter .2s";
   });
 });
+
+/* burger menu */
+
+const menuBtn = document.querySelector(".menu-icon");
+const nav = document.querySelector(".nav");
+const modeBtn = document.querySelector(".switch-wrapper");
+const navList = document.querySelector(".nav-links");
+
+function toggleMenu() {
+  if (!menuBtn.classList.contains("active")) {
+    menuBtn.classList.add("active");
+    body.style.overflow = "hidden";
+    nav.style.top = "0";
+    modeBtn.style.top = "280px";
+  } else {
+    menuBtn.classList.remove("active");
+    body.style.overflow = "visible";
+    nav.style.top = "-370px";
+    modeBtn.style.top = "-70px";
+  }
+}
+
+menuBtn.addEventListener("click", toggleMenu);
+
+// hide menu
+document.addEventListener("click", (e) => {
+  if (e.clientY > 369 && menuBtn.classList.contains("active")) {
+    toggleMenu();
+    console.log(e.clientY);
+  } else if (e.target.classList.contains("nav-link")) {
+    toggleMenu();
+  }
+});
+
+// fix behaviour of switcher (during resizing the window)
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 991) {
+    modeBtn.style.transition = "none";
+    modeBtn.style.top = "0";
+    setTimeout(() => (modeBtn.style.transition = "top 0.5s"), 100);
+  } else if (window.innerWidth < 991 && menuBtn.classList.contains("active")) {
+    modeBtn.style.transition = "none";
+    modeBtn.style.top = "280px";
+    setTimeout(() => (modeBtn.style.transition = "top 0.5s"), 100);
+  } else if (window.innerWidth < 991 && !menuBtn.classList.contains("active")) {
+    modeBtn.style.transition = "none";
+    modeBtn.style.top = "-70px";
+    setTimeout(() => (modeBtn.style.transition = "top 0.5s"), 100);
+  }
+});

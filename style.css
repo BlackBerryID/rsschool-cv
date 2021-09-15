@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,300&display=swap");
 
-:root {
-  --media-990: 990px;
-}
-
 html {
   --font-size-name: 36px;
   --font-size-prof: 32px;
@@ -97,6 +93,7 @@ figure img {
 .nav {
   display: flex;
   width: 85%;
+  user-select: none;
 }
 
 .nav ul:first-child {
@@ -593,10 +590,269 @@ html.dark .footer-svg .path-red {
 }
 
 @media (max-width: 991px) {
+  html {
+    --font-size-link: 28px;
+    --margin-section: 40px;
+  }
+
+  .container {
+    max-width: 720px;
+    padding: 0px;
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 8%;
+    z-index: 3;
+    width: 36px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  .menu-icon span,
+  .menu-icon::before,
+  .menu-icon::after {
+    position: absolute;
+    left: 0;
+    height: 13%;
+    width: 100%;
+    transition: transform 0.2s;
+    background-color: #fff;
+  }
+
+  .menu-icon::before,
+  .menu-icon::after {
+    content: "";
+  }
+
+  .menu-icon::before {
+    top: 0;
+  }
+
+  .menu-icon::after {
+    bottom: 0;
+  }
+
+  .menu-icon span {
+    top: 50%;
+    transition: none;
+    transform: translateY(-50%);
+  }
+
+  .menu-icon.active span {
+    transform: scale(0) translateY(-50%);
+  }
+
+  .menu-icon.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  .menu-icon.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translateY(50%);
+  }
+
+  .nav {
+    position: fixed;
+    top: -370px;
+    height: 370px;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: var(--color-main);
+    transition: top 0.5s;
+  }
+
+  .nav ul:first-child {
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 7%;
+  }
+
+  .nav ul:last-child {
+    align-items: flex-start;
+    margin-left: 7%;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5%;
+  }
+
+  .nav-link {
+    padding: 5px 25px;
+    color: #fff;
+    font-size: var(--font-size-link);
+  }
+
+  .switch-wrapper {
+    position: fixed;
+    top: -70px;
+    left: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 18px;
+    transition: top 0.5s;
+  }
+
+  .container-name {
+    margin-top: 140px;
+  }
+
+  .container-code-example {
+    margin: var(--margin-section) auto;
+  }
 }
 
 @media (max-width: 767px) {
+  html {
+    --font-size-name: 30px;
+    --font-size-title: 24px;
+    --font-size-subtitle: 18px;
+    --font-size-text: 18px;
+  }
+
+  .container {
+    max-width: 525px;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  figure {
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border: 10px solid var(--color-main);
+  }
+
+  .container-name {
+    margin-top: 100px;
+  }
+
+  .code-example {
+    width: 70%;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  .footer-links {
+    margin-right: 110px;
+  }
+
+  .footer-links > li {
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+  }
+
+  .footer-links span {
+    left: 108px;
+    font-size: 30px;
+  }
+
+  .rs-school {
+    width: 108px;
+  }
 }
 
 @media (max-width: 575px) {
+  html {
+    --font-size-name: 26px;
+    --font-size-title: 22px;
+    --font-size-subtitle: 16px;
+    --font-size-text: 16px;
+    --margin-section: 30px;
+  }
+
+  .container {
+    max-width: 420px;
+  }
+
+  .nav ul:first-child {
+    width: 100%;
+  }
+
+  .container-contacts > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-contacts li:first-child {
+    margin-top: 15px;
+  }
+
+  .container-contacts li:last-child {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .projects > li {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .code-example {
+    width: 100%;
+    margin-left: -40px;
+  }
+
+  pre code.hljs {
+    overflow-x: visible !important;
+    margin-left: -20px !important;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  .footer-links {
+    margin-right: 55px;
+  }
+
+  .footer-links > li {
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+  }
+
+  .footer-links span {
+    left: 67px;
+    font-size: 20px;
+  }
+
+  .rs-school {
+    width: 67px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    max-width: 290px;
+  }
+
+  .switch-wrapper {
+    left: 13%;
+  }
+
+  .code-example {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  pre code.hljs {
+    margin-left: -15px !important;
+    padding: 0 !important;
+    font-size: 8px;
+  }
 }
