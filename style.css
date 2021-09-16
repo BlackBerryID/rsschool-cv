@@ -9,7 +9,8 @@ html {
   --font-size-text: 20px;
   --font-size-little: 18px;
   --color-main: rgb(2, 120, 151);
-  --color-link-hover: rgb(1, 101, 126);
+  --color-link-hover: #d49817;
+  /* --color-link-hover: rgb(1, 101, 126); */
   --color-white: #ebebeb;
   --color-dark: #121212;
   --color-text-light: #acb8c1;
@@ -22,7 +23,7 @@ html {
 
 html.dark {
   --color-main: rgb(4, 71, 89);
-  --color-link-hover: rgb(1, 101, 126);
+  --color-link-hover: #bc7319;
 }
 
 html.dark img {
@@ -88,6 +89,10 @@ figure img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+html.dark img {
+  border-color: var(--color-link-hover);
 }
 
 .nav {
@@ -172,7 +177,7 @@ html.dark .switch-info {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--color-link-hover);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -185,10 +190,6 @@ html.dark .switch-info {
 .slider.noTransition::before {
   -webkit-transition: none;
   transition: none;
-}
-
-html.dark .slider:before {
-  background-color: var(--color-white);
 }
 
 input:checked + .slider {
@@ -293,14 +294,20 @@ html.dark .contact-picture {
 /* about me section */
 
 .container-about-me {
+  text-align: center;
   max-width: 940px;
   margin: var(--margin-section) auto;
 }
 
 .title {
-  text-align: center;
+  display: inline-block;
   font-size: var(--font-size-title);
   margin-bottom: 30px;
+  border-bottom: 2px solid orange;
+}
+
+html.dark .title {
+  border-color: var(--color-link-hover);
 }
 
 .text {
@@ -310,6 +317,7 @@ html.dark .contact-picture {
 /* Projects */
 
 .container-projects {
+  text-align: center;
   margin: var(--margin-section) auto;
 }
 
@@ -410,6 +418,10 @@ html.dark .project-tools {
 
 .code-example {
   width: 50%;
+}
+
+code.hljs {
+  font-size: var(--font-size-little);
 }
 
 /* education section */
@@ -533,10 +545,6 @@ footer {
 
 .github {
   background-image: url(assets/GitHub-Mark-64px.png);
-}
-
-html.dark .footer-svg .path-red {
-  fill: #931818;
 }
 
 .rs-school {
