@@ -92,7 +92,10 @@ document.addEventListener("click", (e) => {
   if (e.clientY > 369 && menuBtn.classList.contains("active")) {
     toggleMenu();
     console.log(e.clientY);
-  } else if (e.target.classList.contains("nav-link")) {
+  } else if (
+    e.target.classList.contains("nav-link") &&
+    menuBtn.classList.contains("active")
+  ) {
     toggleMenu();
   }
 });

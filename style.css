@@ -97,12 +97,12 @@ html.dark img {
 
 .nav {
   display: flex;
-  width: 85%;
+  width: 87%;
   user-select: none;
 }
 
 .nav ul:first-child {
-  width: 46%;
+  width: 43%;
 }
 
 .nav ul:last-child {
@@ -137,7 +137,7 @@ html.dark .switch-info {
 
 .switch-wrapper {
   position: relative;
-  left: -40px;
+  left: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
