@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dmitry Khomichenko</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      class="highlight"
+      rel="stylesheet"
+      href="highlight/styles/github.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <figure>
+          <img src="assets/avatar.jpg" alt="photo" />
+        </figure>
+        <div class="menu-icon">
+          <span></span>
+        </div>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#about-me" class="nav-link">About me</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#code-example" class="nav-link">Code example</a></li>
+          </ul>
+          <ul class="nav-links">
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+          </ul>
+        </nav>
+        <div class="switch-wrapper">
+          <label class="switch">
+            <input
+              class="checkbox"
+              type="checkbox"
+              onclick="toggleColor()"
+              id="checkBox"
+            />
+            <span class="slider"></span>
+          </label>
+          <p class="switch-info">Dark mode</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="container container-name">
+      <h1 class="name">Dmitry Khomichenko</h1>
+      <h2 class="prof">Front-End Developer</h2>
+    </section>
+
+    <section class="container container-contacts">
+      <h6 class="hidden">hide me</h6>
+      <ul>
+        <li>
+          <a class="contact-info" href="tel:+375296597583">
+            <span class="contact-picture cellphone"></span>
+            +375(29)659-75-83
+          </a>
+        </li>
+        <li>
+          <a class="contact-info" href="mailto:iddf1994one@gmail.com">
+            <span class="contact-picture email"></span>
+            iddf1994one@gmail.com
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container container-about-me" id="about-me">
+      <h3 class="title title-about-me">About me</h3>
+      <p class="text">
+        I'm on my way to becoming a front-end developer. Since I want to create
+        quality products I'm interested in practicing in order to gain new
+        knowledge, improve my skills and get a job as a result. Feel free to
+        contact me.
+      </p>
+    </section>
+
+    <section class="container container-projects" id="projects">
+      <h3 class="title">Projects</h3>
+      <ul class="projects">
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/museum/"
+            class="project-link museum"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Museum</h4>
+          <p class="project-info">A copy of the Louvre web page</p>
+          <p class="project-tools">SCSS/Javascript</p>
+        </li>
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/js-clock/"
+            class="project-link alarm-clock"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Alarm clock</h4>
+          <p class="project-info">Alarm clock with different sounds</p>
+          <p class="project-tools">Javascript</p>
+        </li>
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/vertical-slider/"
+            class="project-link vertical-slider"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Vertical slider</h4>
+          <p class="project-info">Vertical slider + swiper</p>
+          <p class="project-tools">Javascript</p>
+        </li>
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/custom-video-player/"
+            class="project-link video-player"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Custom video player</h4>
+          <p class="project-info">Leonardo DiCaprio filmography</p>
+          <p class="project-tools">Javascript</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container container-code-example" id="code-example">
+      <h3 class="title">Code example</h3>
+      <pre class="code-example"><code class="language-javascript">
+        function deepCount(a){
+          let deepLength = 0
+          
+          for (let i = 0; i &lt; a.length; i++) {
+            deepLength++
+            if (Array.isArray(a[i])) {
+              deepLength += deepCount(a[i])
+            }
+          }
+          
+          return deepLength
+        }
+      </code></pre>
+    </section>
+
+    <section class="container container-education" id="education">
+      <h3 class="title">Education</h3>
+      <ul class="education-list">
+        <li>
+          <div class="education-time">Jul-Aug 2021</div>
+          <div class="education-info">
+            <h5 class="education-title">Rolling Scopes School</h5>
+            <p class="education-info">Javascript/Front-end Pre-School</p>
+          </div>
+        </li>
+        <li>
+          <div class="education-time">2012-2015</div>
+          <div class="education-info BNTU">
+            <h5 class="education-title">
+              Belarusian National Technical University
+            </h5>
+            <p class="education-info">Marketing and Economics</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container container-skills" id="skills">
+      <h3 class="title">Skills</h3>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3/SCSS</li>
+        <li>Javascript basics</li>
+        <li>Git (Github)</li>
+        <li>Webpack basics</li>
+        <li>Figma</li>
+        <li>English B1</li>
+      </ul>
+    </section>
+
+    <div class="container container-video">
+      <iframe
+        class="video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/5lq5tz2dSn4"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <footer>
+      <div class="container container-footer">
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://github.com/BlackBerryID"
+              class="footer-link github"
+              target="_blank"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://rs.school/js/"
+              class="footer-link rs-school"
+              target="_blank"
+            >
+              <span>2021</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
