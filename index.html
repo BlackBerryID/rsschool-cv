@@ -4,139 +4,223 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/c824c28017.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Dmitry Khomichenko</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      class="highlight"
+      rel="stylesheet"
+      href="highlight/styles/github.min.css"
+    />
   </head>
   <body>
-    <div class="resume">
-      <section class="resume-left">
-        <header>
-          <figure>
-            <img src="/rsschool-cv/assets/photo.jpg" alt="photo" />
-          </figure>
-          <h1>Dmitry Khomichenko</h1>
-          <h4>newbie web developer</h4>
-        </header>
-        <nav>
-          <h4>Contact Info</h4>
-          <ul>
-            <li>
-              <span class="icon"><i class="far fa-envelope"></i></span>
-              <span class="text"
-                ><a href="mailto:iddf1994one@gmail.com"
-                  >iddf1994one@gmail.com</a
-                ></span
-              >
-            </li>
-            <li>
-              <span class="icon"><i class="fab fa-viber"></i></span>
-              <span class="text">+37529 6597583</span>
-            </li>
-            <li>
-              <span class="icon"><i class="fab fa-telegram-plane"></i></span>
-              <span class="text">@BlackBerryID</span>
-            </li>
+    <header>
+      <div class="container header-container">
+        <figure>
+          <img src="assets/avatar.jpg" alt="photo" />
+        </figure>
+        <div class="menu-icon">
+          <span></span>
+        </div>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#about-me" class="nav-link">About me</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#code-example" class="nav-link">Code example</a></li>
+          </ul>
+          <ul class="nav-links">
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
           </ul>
         </nav>
-        <div class="education">
-          <h4>Education</h4>
-          <p class="period">2012-2015</p>
-          <p class="specialty">Marketing and Economics</p>
-          <p class="university">Belarusian National Technical University</p>
+        <div class="switch-wrapper">
+          <label class="switch">
+            <input
+              class="checkbox"
+              type="checkbox"
+              onclick="toggleColor()"
+              id="checkBox"
+            />
+            <span class="slider"></span>
+          </label>
+          <p class="switch-info">Dark mode</p>
         </div>
-        <div class="english">
-          <h4>English proficiency</h4>
-          <span>B1</span>
-        </div>
-      </section>
+      </div>
+    </header>
 
-      <section class="resume-right">
-        <div class="about-me">
-          <h4 class="title">About Me</h4>
-          <p>
-            I am an experienced sales manager. Programming is new to me. But
-            believe me, it will not last long. I will conquer this top, it's
-            just a matter of time.
-          </p>
-        </div>
-        <div class="experience">
-          <h4>Experience</h4>
-          <ul>
-            <li>
-              <p>I read the book: "grokking algorithms"</p>
-            </li>
-            <li>
-              <p>
-                I did a task from 2021Q1 stage 1: ‘virtual piano’. You can check
-                it
-                <a
-                  href="https://rolling-scopes-school.github.io/blackberryid-JSFE2021Q1/virtual-piano/"
-                  >here</a
-                >
-              </p>
-            </li>
-            <li>
-              <p>
-                I passed most of the lessons from WesBos’s course:
-                <a href="https://javascript30.com/">JS30</a>
-              </p>
-            </li>
-            <li>
-              <h5>Code example:</h5>
-              <pre>
-                  function euclideanDistance(point1, point2){
-                    const length = point1.length;
-                    let result = 0;
-                    for (let i = 0; i &lt; length; i++) {
-                      result += Math.pow((point2[i] - point1[i]), 2);
-                    }
-                    return Math.round(Math.sqrt(result) * 100) / 100;
-                  }
-              </pre>
-            </li>
-          </ul>
-        </div>
-        <div class="skills">
-          <h4>skills</h4>
-          <ul class="skills-items">
-            <li class="skills-item">HTML5</li>
-            <li class="skills-item">CSS3</li>
-            <li class="skills-item">Sass</li>
-            <li class="skills-item">Javascript basics</li>
-            <li class="skills-item">Git (Github)</li>
-          </ul>
-        </div>
-        <footer>
-          <div class="github">
-            <a href="https://github.com/BlackBerryID">
-              <img
-                class="github-mark"
-                src="assets/GitHub-Mark-64px.png"
-                alt="github-mark"
-              />
-              <img
-                class="github-logo"
-                src="assets/GitHub_Logo.png"
-                alt="github-logo"
-              />
-            </a>
+    <section class="container container-name">
+      <h1 class="name">Dmitry Khomichenko</h1>
+      <h2 class="prof">Front-End Developer</h2>
+    </section>
+
+    <section class="container container-contacts">
+      <h6 class="hidden">hide me</h6>
+      <ul>
+        <li>
+          <a class="contact-info" href="tel:+375296597583">
+            <span class="contact-picture cellphone"></span>
+            +375(29)659-75-83
+          </a>
+        </li>
+        <li>
+          <a class="contact-info" href="mailto:iddf1994one@gmail.com">
+            <span class="contact-picture email"></span>
+            iddf1994one@gmail.com
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container container-about-me" id="about-me">
+      <h3 class="title title-about-me">About me</h3>
+      <p class="text">
+        I'm on my way to becoming a front-end developer. Since I want to create
+        quality products I'm interested in practicing in order to gain new
+        knowledge, improve my skills and get a job as a result. Feel free to
+        contact me.
+      </p>
+    </section>
+
+    <section class="container container-projects" id="projects">
+      <h3 class="title">Projects</h3>
+      <ul class="projects">
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/museum/"
+            class="project-link museum"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Museum</h4>
+          <p class="project-info">A copy of the Louvre web page</p>
+          <p class="project-tools">SCSS/Javascript</p>
+        </li>
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/js-clock/"
+            class="project-link alarm-clock"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Alarm clock</h4>
+          <p class="project-info">Alarm clock with different sounds</p>
+          <p class="project-tools">Javascript</p>
+        </li>
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/vertical-slider/"
+            class="project-link vertical-slider"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Vertical slider</h4>
+          <p class="project-info">Vertical slider + swiper</p>
+          <p class="project-tools">Javascript</p>
+        </li>
+        <li>
+          <a
+            href="https://rolling-scopes-school.github.io/blackberryid-JSFEPRESCHOOL/custom-video-player/"
+            class="project-link video-player"
+            target="_blank"
+          >
+          </a>
+          <h4 class="project-name">Custom video player</h4>
+          <p class="project-info">Leonardo DiCaprio filmography</p>
+          <p class="project-tools">Javascript</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container container-code-example" id="code-example">
+      <h3 class="title">Code example</h3>
+      <pre class="code-example"><code class="language-javascript">
+        function deepCount(a){
+          let deepLength = 0
+          
+          for (let i = 0; i &lt; a.length; i++) {
+            deepLength++
+            if (Array.isArray(a[i])) {
+              deepLength += deepCount(a[i])
+            }
+          }
+          
+          return deepLength
+        }
+      </code></pre>
+    </section>
+
+    <section class="container container-education" id="education">
+      <h3 class="title">Education</h3>
+      <ul class="education-list">
+        <li>
+          <div class="education-time">Jul-Aug 2021</div>
+          <div class="education-info">
+            <h5 class="education-title">Rolling Scopes School</h5>
+            <p class="education-info">Javascript/Front-end Pre-School</p>
           </div>
-          <div class="rsschool">
-            <a href="https://rs.school/js/">
-              <img
-                class="rsschool-logo"
-                src="assets/rs_school_js.svg"
-                alt="rsschool-logo"
-              />
-            </a>
-            <span class="year">2021</span>
+        </li>
+        <li>
+          <div class="education-time">2012-2015</div>
+          <div class="education-info BNTU">
+            <h5 class="education-title">
+              Belarusian National Technical University
+            </h5>
+            <p class="education-info">Marketing and Economics</p>
           </div>
-        </footer>
-      </section>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container container-skills" id="skills">
+      <h3 class="title">Skills</h3>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3/SCSS</li>
+        <li>Javascript basics</li>
+        <li>Git (Github)</li>
+        <li>Webpack basics</li>
+        <li>Figma</li>
+        <li>English B1</li>
+      </ul>
+    </section>
+
+    <div class="container container-video">
+      <iframe
+        class="video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/5lq5tz2dSn4"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
+    <footer>
+      <div class="container container-footer">
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://github.com/BlackBerryID"
+              class="footer-link github"
+              target="_blank"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://rs.school/js/"
+              class="footer-link rs-school"
+              target="_blank"
+            >
+              <span>2021</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="highlight/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="index.js"></script>
   </body>
 </html>
