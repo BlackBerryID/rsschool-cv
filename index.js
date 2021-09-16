@@ -113,3 +113,15 @@ window.addEventListener("resize", () => {
     setTimeout(() => (modeBtn.style.transition = "top 0.5s"), 100);
   }
 });
+
+/* console log description */
+
+const styles = [
+  "font-size: 30px; color: rgb(2, 120, 151);",
+  "font-size: 16px; color: rgb(2, 120, 151);",
+  "font-size: 16px; color: #fff; background-color: lightgreen; border-radius: 50%; padding: 5px;",
+];
+
+console.log("%cTitle", styles[0]);
+console.log("%c1. Вёрстка валидная %c+10", styles[1], styles[2]);
+console.log("%c2. Вёрстка семантическая: %c+20", styles[1], styles[2]);

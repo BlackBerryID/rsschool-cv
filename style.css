@@ -324,10 +324,9 @@ html.dark .contact-picture {
   position: relative;
   width: 22%;
   height: 150px;
-  transition: transform 0.5s;
 }
 
-html.light .projects > li:hover {
+html.light .project-link:hover {
   transform: scale(1.1);
 }
 
@@ -345,7 +344,7 @@ html.dark .project-link:hover {
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  transition: filter 0.2s;
+  transition: filter 0.2s, transform 0.5s;
 }
 
 html.dark .project-link {
@@ -368,9 +367,11 @@ html.dark .project-link {
   background-image: url(assets/video-player.png);
 }
 
-.project-name {
+.project-name,
+.project-info,
+.project-tools {
   position: absolute;
-  bottom: -30px;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -379,7 +380,22 @@ html.dark .project-link {
   font-size: var(--font-size-subtitle);
 }
 
-html.dark .project-name {
+.project-info {
+  font-style: italic;
+  bottom: -60px;
+  font-size: var(--font-size-little);
+  opacity: 1;
+}
+
+.project-tools {
+  bottom: -80px;
+  font-size: var(--font-size-little);
+  opacity: 0.5;
+}
+
+html.dark .project-name,
+html.dark .project-info,
+html.dark .project-tools {
   color: var(--color-text-light);
 }
 
@@ -451,6 +467,23 @@ html.dark .project-name {
   margin-bottom: 5px;
 }
 
+/* video */
+
+.container-video {
+  display: flex;
+  justify-content: center;
+}
+
+.video {
+  border-radius: 10px;
+  width: 720px;
+  height: 405px;
+  margin-bottom: 50px;
+}
+
+html.dark .video {
+  filter: brightness(75%);
+}
 /* footer */
 
 footer {
@@ -460,7 +493,7 @@ footer {
 
 .footer-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-right: 200px;
 }
 
@@ -501,11 +534,6 @@ footer {
   background-image: url(assets/GitHub-Mark-64px.png);
 }
 
-.youtube > svg {
-  width: 100%;
-  height: 100%;
-}
-
 html.dark .footer-svg .path-red {
   fill: #931818;
 }
@@ -519,6 +547,7 @@ html.dark .footer-svg .path-red {
   html {
     --font-size-link: 20px;
     --font-size-subtitle: 20px;
+    --font-size-little: 16px;
   }
 
   .container {
@@ -542,7 +571,7 @@ html.dark .footer-svg .path-red {
 
   .projects > li {
     width: 40%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   .skills-list {
@@ -586,6 +615,11 @@ html.dark .footer-svg .path-red {
 
   .switch-wrapper {
     left: 0;
+  }
+
+  .video {
+    width: 640px;
+    height: 360px;
   }
 }
 
@@ -715,6 +749,7 @@ html.dark .footer-svg .path-red {
     --font-size-title: 24px;
     --font-size-subtitle: 18px;
     --font-size-text: 18px;
+    --font-size-little: 14px;
   }
 
   .container {
@@ -740,6 +775,16 @@ html.dark .footer-svg .path-red {
 
   .code-example {
     width: 70%;
+  }
+
+  .education-info.BNTU {
+    margin-left: 50px;
+  }
+
+  .video {
+    width: 520px;
+    height: 295px;
+    margin-bottom: 30px;
   }
 
   footer {
@@ -772,6 +817,7 @@ html.dark .footer-svg .path-red {
     --font-size-title: 22px;
     --font-size-subtitle: 16px;
     --font-size-text: 16px;
+    --font-size-little: 13px;
     --margin-section: 30px;
   }
 
@@ -799,7 +845,7 @@ html.dark .footer-svg .path-red {
 
   .projects > li {
     width: 80%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   .code-example {
@@ -810,6 +856,15 @@ html.dark .footer-svg .path-red {
   pre code.hljs {
     overflow-x: visible !important;
     margin-left: -20px !important;
+  }
+
+  .education-info.BNTU {
+    margin-left: 45px;
+  }
+
+  .video {
+    width: 400px;
+    height: 225px;
   }
 
   footer {
@@ -854,5 +909,14 @@ html.dark .footer-svg .path-red {
     margin-left: -15px !important;
     padding: 0 !important;
     font-size: 8px;
+  }
+
+  .education-info.BNTU {
+    margin-left: 20px;
+  }
+
+  .video {
+    width: 300px;
+    height: 170px;
   }
 }
