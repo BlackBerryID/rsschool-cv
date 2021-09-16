@@ -479,6 +479,7 @@ html.dark .project-tools {
   width: 720px;
   height: 405px;
   margin-bottom: 50px;
+  border: 0;
 }
 
 html.dark .video {
